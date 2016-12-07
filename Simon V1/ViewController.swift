@@ -107,6 +107,11 @@ class ViewController: UIViewController
         }
     }
     
+    @IBAction func unwindToMenu(Segue: UIStoryboardSegue)
+    {
+        
+    }
+    
     @IBAction func onGridTapped(_ sender: UITapGestureRecognizer)
     {
         var message : String
@@ -127,13 +132,11 @@ class ViewController: UIViewController
                         {
                             message = "You didn't memorize any pattern"
                         }
-                        
-                        //let scoreScreen = highScoreViewController()
-                        //let segue = UIStoryboardSegue(identifier: "High Scores Screen", source: self, destination: scoreScreen)
                         let alert = UIAlertController(title: "You have lost ", message: message, preferredStyle: .alert)
                         let alertAction = UIAlertAction(title: "Restart Game", style: .default) {
                             
-                            (action) -> Void in self.performSegue(withIdentifier: "High Scores Screen", sender: self)//present(scoreScreen, animated: true, completion: nil) // want it to show off the high scores view controller
+                            (action) -> Void in self.performSegue(withIdentifier: "High Scores Screen", sender: self)
+                            self.resetGame()
                         }
                         alert.addAction(alertAction)
                         present(alert, animated: true, completion: nil)
@@ -166,7 +169,8 @@ class ViewController: UIViewController
                             let alert = UIAlertController(title: "You have lost ", message: message, preferredStyle: .alert)
                             let alertAction = UIAlertAction(title: "Restart Game", style: .default) {
                                 
-                                (action) -> Void in self.performSegue(withIdentifier: "High Scores Screen", sender: self) // want to show the second view controller that shows off the high scores, segue?
+                                (action) -> Void in self.performSegue(withIdentifier: "High Scores Screen", sender: self)
+                                self.resetGame()
                             }
                             alert.addAction(alertAction)
                             present(alert, animated: true, completion: nil)

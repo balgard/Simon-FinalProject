@@ -14,7 +14,8 @@ class highScoreViewController: UIViewController {
     {
         super.viewDidLoad()
     }
-    @IBAction func onTapped(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "Main Screen", sender: self)
+    @IBAction func onTapped(_ sender: UIButton)
+    {
+        self.performSegue(withIdentifier: "unwindToMenu", sender: self)
     }
 }
