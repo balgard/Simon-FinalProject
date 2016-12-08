@@ -192,6 +192,7 @@ class ViewController: UIViewController
         tapsPerPattern = 0
         patternButton.setTitle("Start Game", for: .normal)
     }
+
     
     @IBAction func buttonPressed(_ sender: UIButton) {
         if ((needsPattern == true) && (tapsPerPattern == pattern.count))
