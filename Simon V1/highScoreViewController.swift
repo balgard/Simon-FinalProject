@@ -39,10 +39,15 @@ class highScoreViewController: UIViewController {
         for label in scoreArray
         {
             label.number = i
-            label.text = "\(label.value)"
             i += 1
         }
     }
+    
+    func setNewValues(label : scoreLabel, value : Int)
+    {
+        label.value = value
+    }
+    
     @IBAction func onTapped(_ sender: UIButton)
     {
         self.performSegue(withIdentifier: "unwindToMenu", sender: self)
