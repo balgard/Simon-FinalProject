@@ -122,7 +122,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="New Game"/>
                                 <connections>
-                                    <action selector="onTapped:" destination="sLZ-rQ-6HJ" eventType="touchUpInside" id="UA5-el-blu"/>
+                                    <action selector="onTapped:" destination="sLZ-rQ-6HJ" eventType="touchUpInside" id="XYX-yn-ZrN"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="High Scores" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Orr-EM-Ypb">
@@ -318,7 +318,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0y8-Ug-nZN" userLabel="Score8" customClass="scoreLabel" customModule="Simon_V1" customModuleProvider="target">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0y8-Ug-nZN" userLabel="Score9" customClass="scoreLabel" customModule="Simon_V1" customModuleProvider="target">
                                         <rect key="frame" x="153" y="300" width="45" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -353,27 +353,26 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="name1" destination="vhe-Zs-wdt" id="qzH-2R-zg0"/>
-                        <outlet property="name10" destination="Un8-gZ-Dlp" id="GeQ-ib-rV2"/>
-                        <outlet property="name2" destination="4X1-CW-pwo" id="TM4-DD-aVg"/>
-                        <outlet property="name3" destination="UuO-DN-JX9" id="pX2-YX-QUX"/>
-                        <outlet property="name4" destination="pZO-bG-ee5" id="MAR-l3-hfG"/>
-                        <outlet property="name5" destination="oqj-o7-KmS" id="eZh-zl-BXA"/>
-                        <outlet property="name6" destination="J6U-f4-qxn" id="Byl-Rd-3s4"/>
-                        <outlet property="name7" destination="4cH-VB-Tzi" id="Obz-r9-WKT"/>
-                        <outlet property="name8" destination="BQ6-xT-pJL" id="3YR-tk-uo7"/>
-                        <outlet property="name9" destination="pAZ-tZ-MBn" id="P2b-gM-232"/>
-                        <outlet property="score" destination="0y8-Ug-nZN" id="Hgx-UJ-OeN"/>
-                        <outlet property="score1" destination="gAt-0X-Sau" id="Jva-a1-JR8"/>
-                        <outlet property="score10" destination="SYM-fR-eQS" id="9nA-Ir-ocT"/>
-                        <outlet property="score2" destination="ah7-Ij-LG2" id="4JN-VJ-P40"/>
-                        <outlet property="score3" destination="Ahc-XY-6jj" id="MYn-GV-bJq"/>
-                        <outlet property="score4" destination="AZz-uu-jpi" id="iAa-Fm-0vN"/>
-                        <outlet property="score5" destination="4VM-en-Pey" id="qIM-Cw-1qS"/>
-                        <outlet property="score6" destination="Pvf-QZ-Sqk" id="wef-sI-NFK"/>
-                        <outlet property="score7" destination="8u0-df-Uen" id="YWD-iv-WYg"/>
-                        <outlet property="score8" destination="FOv-RR-8B4" id="EYV-SJ-dyR"/>
-                        <outlet property="score9" destination="0y8-Ug-nZN" id="ak4-ip-s5z"/>
+                        <outlet property="name1" destination="vhe-Zs-wdt" id="nl5-Uv-ar3"/>
+                        <outlet property="name10" destination="Un8-gZ-Dlp" id="SWF-RT-S6B"/>
+                        <outlet property="name2" destination="4X1-CW-pwo" id="dD9-1Z-UBE"/>
+                        <outlet property="name3" destination="UuO-DN-JX9" id="CCu-rS-bXN"/>
+                        <outlet property="name4" destination="pZO-bG-ee5" id="csU-34-0H6"/>
+                        <outlet property="name5" destination="oqj-o7-KmS" id="g4C-go-oUa"/>
+                        <outlet property="name6" destination="J6U-f4-qxn" id="t5e-ns-qAh"/>
+                        <outlet property="name7" destination="4cH-VB-Tzi" id="J1j-hG-Pbe"/>
+                        <outlet property="name8" destination="BQ6-xT-pJL" id="xqw-2K-CEK"/>
+                        <outlet property="name9" destination="pAZ-tZ-MBn" id="dDG-2u-4sS"/>
+                        <outlet property="score1" destination="gAt-0X-Sau" id="qTL-LU-pGr"/>
+                        <outlet property="score10" destination="SYM-fR-eQS" id="T6x-7F-0Ky"/>
+                        <outlet property="score2" destination="ah7-Ij-LG2" id="W8K-xP-4QV"/>
+                        <outlet property="score3" destination="Ahc-XY-6jj" id="fD9-xH-s7P"/>
+                        <outlet property="score4" destination="AZz-uu-jpi" id="UD7-8u-EFT"/>
+                        <outlet property="score5" destination="4VM-en-Pey" id="rCi-QQ-LFm"/>
+                        <outlet property="score6" destination="Pvf-QZ-Sqk" id="Uhn-OJ-lNr"/>
+                        <outlet property="score7" destination="8u0-df-Uen" id="2cw-y5-RoA"/>
+                        <outlet property="score8" destination="FOv-RR-8B4" id="Knt-uJ-Wco"/>
+                        <outlet property="score9" destination="0y8-Ug-nZN" id="cAe-sK-4dt"/>
                         <segue destination="g4C-sp-5JR" kind="unwind" identifier="unwindToMenu" unwindAction="unwindToMenuWithSegue:" id="WIE-N4-iWj"/>
                     </connections>
                 </viewController>
