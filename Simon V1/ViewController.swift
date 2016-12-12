@@ -191,6 +191,7 @@ class ViewController: UIViewController
         gameEnded = false
         tapsPerPattern = 0
         patternButton.setTitle("Start Game", for: .normal)
+        currentScore.text = "0"
     }
 
     
