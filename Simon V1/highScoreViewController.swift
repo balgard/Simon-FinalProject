@@ -50,9 +50,8 @@ class highScoreViewController: UIViewController {
         {
             setNewValues(label: label, value: 0)
         }
-        setNewValues(label: scoreArray[8], value: 40)
-        //sortValues()
-        
+        setNewValues(label: scoreArray[2], value: 40)
+        sortValues()
     }
     
     func numberArray()
@@ -68,16 +67,31 @@ class highScoreViewController: UIViewController {
     func sortValues()
     {
         var i = 0
-        while i < scoreArray.count
+        var scores = [Int]()
+        while i < scoreArray.count - 1
         {
-            if scoreArray[i].value < scoreArray[i+1].value
+            scores.append(scoreArray[i].value)
+            
+            /*if scoreArray[i].value < scoreArray[i+1].value
             {
                 var temp = scoreArray[i].value
                 setNewValues(label: scoreArray[i], value: scoreArray[i+1].value)
                 setNewValues(label: scoreArray[i+1], value: temp)
-            }
+            }*/
+            i += 1
+            // doesn't sort through the values.  Doesn't do anything right now.
+            // How do i sort through an array so that the greatest value is at the front of the array
+        }
+        scores = scores.sorted(by: >)
+        var x = 0
+        while x < scoreArray.count - 1
+        {
+            setNewValues(label: scoreArray[x], value : scores[x])
+            x += 1
         }
     }
+    
+    
     
     func setNewValues(label : scoreLabel, value : Int)
     {
