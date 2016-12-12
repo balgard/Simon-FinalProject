@@ -34,8 +34,30 @@ class highScoreViewController: UIViewController {
     
     override func viewDidLoad()
     {
-        var i = 0
         super.viewDidLoad()
+        scoreArray.append(score1)
+        scoreArray.append(score2)
+        scoreArray.append(score3)
+        scoreArray.append(score4)
+        scoreArray.append(score5)
+        scoreArray.append(score6)
+        scoreArray.append(score7)
+        scoreArray.append(score8)
+        scoreArray.append(score9)
+        scoreArray.append(score10)
+        numberArray()
+        for label in scoreArray
+        {
+            setNewValues(label: label, value: 0)
+        }
+        setNewValues(label: scoreArray[8], value: 40)
+        //sortValues()
+        
+    }
+    
+    func numberArray()
+    {
+        var i = 0
         for label in scoreArray
         {
             label.number = i
@@ -43,9 +65,24 @@ class highScoreViewController: UIViewController {
         }
     }
     
+    func sortValues()
+    {
+        var i = 0
+        while i < scoreArray.count
+        {
+            if scoreArray[i].value < scoreArray[i+1].value
+            {
+                var temp = scoreArray[i].value
+                setNewValues(label: scoreArray[i], value: scoreArray[i+1].value)
+                setNewValues(label: scoreArray[i+1], value: temp)
+            }
+        }
+    }
+    
     func setNewValues(label : scoreLabel, value : Int)
     {
         label.value = value
+        label.text = "\(label.value)"
     }
     
     @IBAction func onTapped(_ sender: UIButton)
