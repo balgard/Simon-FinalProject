@@ -31,6 +31,8 @@ class highScoreViewController: UIViewController {
     @IBOutlet weak var score9: scoreLabel!
     @IBOutlet weak var score10: scoreLabel!
     var scoreArray = [scoreLabel]()
+    var nameArray = [String]()
+    var namesScores = [Int : String]()
     
     override func viewDidLoad()
     {
@@ -45,13 +47,32 @@ class highScoreViewController: UIViewController {
         scoreArray.append(score8)
         scoreArray.append(score9)
         scoreArray.append(score10)
+        nameArray.append(name1.text!)
+        nameArray.append(name2.text!)
+        nameArray.append(name3.text!)
+        nameArray.append(name4.text!)
+        nameArray.append(name5.text!)
+        nameArray.append(name6.text!)
+        nameArray.append(name7.text!)
+        nameArray.append(name8.text!)
+        nameArray.append(name9.text!)
+        nameArray.append(name10.text!)
+        namesScores[score1.value] = name1.text!
+        namesScores[score2.value] = name2.text!
+        namesScores[score3.value] = name3.text!
+        namesScores[score4.value] = name4.text!
+        namesScores[score5.value] = name5.text!
+        namesScores[score6.value] = name6.text!
+        namesScores[score7.value] = name7.text!
+        namesScores[score8.value] = name8.text!
+        namesScores[score9.value] = name9.text!
+        namesScores[score10.value] = name10.text!
+        
         numberArray()
-        for label in scoreArray
-        {
-            setNewValues(label: label, value: 0)
-        }
         setNewValues(label: scoreArray[2], value: 40)
+        name3.text = "X"
         sortValues()
+        sortNames()
     }
     
     func numberArray()
@@ -68,21 +89,37 @@ class highScoreViewController: UIViewController {
     {
         var i = 0
         var scores = [Int]()
-        while i < scoreArray.count - 1
+        while i < scoreArray.count
         {
             scores.append(scoreArray[i].value)
             i += 1
         }
         scores = scores.sorted(by: >)
         var x = 0
-        while x < scoreArray.count - 1
+        while x < scoreArray.count
         {
             setNewValues(label: scoreArray[x], value : scores[x])
             x += 1
         }
     }
     
-    
+    func sortNames()
+    {
+        var oldScores = [Int]()
+        for (key, value) in namesScores
+        {
+            oldScores.append(key)
+        }
+        for compare in oldScores
+        {
+            if(oldScores[compare] != scoreArray[compare].value)
+            {
+                namesScores[compare] = nameArray[compare]
+                
+            }
+        }
+        //does nothing, but doesn't break anything
+    }
     
     func setNewValues(label : scoreLabel, value : Int)
     {
