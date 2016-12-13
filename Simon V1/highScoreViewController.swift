@@ -41,6 +41,7 @@ class highScoreViewController: UIViewController {
         scoreArray.append(score9)
         scoreArray.append(score10)
         
+        
         setNewValues(label: scoreArray[2], value: 0)
         setNewValues(label: scoreArray[3], value: 0)
         setNewValues(label: scoreArray[1], value: 0)
