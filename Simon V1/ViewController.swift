@@ -204,10 +204,10 @@ class ViewController: UIViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         let dvc = segue.destination as! highScoreViewController
-        if segue.identifier == "Scores Segue"
+        if segue.identifier == "High Scores Screen"
         {
             dvc.title = "High Scores"
-            dvc.currentScore = pattern.count
+            dvc.currentScore = pattern.count - 1
         }
     }
 
