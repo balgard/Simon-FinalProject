@@ -115,7 +115,6 @@ class highScoreViewController: UIViewController {
             if(oldScores[compare] != scoreArray[compare].value)
             {
                 namesScores[compare] = nameArray[compare]
-                
             }
         }
         //does nothing, but doesn't break anything
