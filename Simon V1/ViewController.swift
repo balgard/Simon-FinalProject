@@ -132,6 +132,7 @@ class ViewController: UIViewController
                         {
                             message = "You didn't memorize any pattern"
                         }
+                        
                         let alert = UIAlertController(title: "You have lost ", message: message, preferredStyle: .alert)
                         let alertAction = UIAlertAction(title: "Restart Game", style: .default) {
                             
@@ -165,11 +166,11 @@ class ViewController: UIViewController
                             {
                                 message = "You didn't memorize any pattern"
                             }
-                            //let scoreScreen = highScoreViewController()
+                            
                             let alert = UIAlertController(title: "You have lost ", message: message, preferredStyle: .alert)
                             let alertAction = UIAlertAction(title: "Restart Game", style: .default) {
                                 
-                                (action) -> Void in self.performSegue(withIdentifier: "High Scores Screen", sender: self)
+                                (action) ->Void in self.performSegue(withIdentifier: "High Scores Screen", sender: self)
                                 self.resetGame()
                             }
                             alert.addAction(alertAction)
@@ -192,6 +193,22 @@ class ViewController: UIViewController
         tapsPerPattern = 0
         patternButton.setTitle("Start Game", for: .normal)
         currentScore.text = "0"
+    }
+    
+    
+    // Want to prepare for the segue between viewControllers after pressing button, don't know how to get the current segue.
+    
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        let dvc = segue.destination as! highScoreViewController
+        if segue.identifier == "Scores Segue"
+        {
+            dvc.title = "High Scores"
+            dvc.currentScore = pattern.count
+        }
     }
 
     
