@@ -11,4 +11,5 @@ import UIKit
 class scoreLabel: UILabel {
     var number = 0
     var value = 0
+    var name = ""
 }

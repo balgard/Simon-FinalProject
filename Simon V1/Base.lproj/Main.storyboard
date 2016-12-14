@@ -132,7 +132,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aaA-Io-hjD">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aaA-Io-hjD" userLabel="Score View">
                                 <rect key="frame" x="87" y="159" width="240" height="418"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -204,9 +204,14 @@
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Qbv-sG-A0d" appends="YES" id="M4V-oA-9pl"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="score1" destination="gAt-0X-Sau" id="DR2-k8-CDw"/>
@@ -219,11 +224,18 @@
                         <outlet property="score7" destination="8u0-df-Uen" id="vJ2-9A-mw7"/>
                         <outlet property="score8" destination="FOv-RR-8B4" id="Ly9-ZC-MWO"/>
                         <outlet property="score9" destination="0y8-Ug-nZN" id="PHa-ug-Kiz"/>
+                        <outlet property="scoreView" destination="aaA-Io-hjD" id="XhB-AD-4Ek"/>
+                        <outlet property="stackView" destination="Xml-Ce-10U" id="xDs-yb-Z1w"/>
                         <segue destination="g4C-sp-5JR" kind="unwind" identifier="unwindToMenu" unwindAction="unwindToMenuWithSegue:" id="WIE-N4-iWj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aoq-FT-GTp" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="g4C-sp-5JR" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="Qbv-sG-A0d">
+                    <connections>
+                        <action selector="onScoreTapped:" destination="sLZ-rQ-6HJ" id="m0C-ti-iTf"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="960.86956521739137" y="124.72826086956523"/>
         </scene>

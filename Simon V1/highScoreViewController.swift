@@ -9,7 +9,7 @@
 import UIKit
 
 class highScoreViewController: UIViewController {
-
+    
     @IBOutlet weak var score1: scoreLabel!
     @IBOutlet weak var score2: scoreLabel!
     @IBOutlet weak var score3: scoreLabel!
@@ -20,6 +20,8 @@ class highScoreViewController: UIViewController {
     @IBOutlet weak var score8: scoreLabel!
     @IBOutlet weak var score9: scoreLabel!
     @IBOutlet weak var score10: scoreLabel!
+    @IBOutlet weak var scoreView: UIView!
+    @IBOutlet weak var stackView: UIStackView!
     
     var currentScore = 0
     
@@ -52,7 +54,17 @@ class highScoreViewController: UIViewController {
         setNewValues(label: scoreArray[7], value: 3)
         setNewValues(label: scoreArray[8], value: 0)
         setNewValues(label: scoreArray[9], value: 0)
-        
+        scoreArray[0].name = "TEST"
+        scoreArray[1].name = "TEST"
+        scoreArray[2].name = "TEST"
+        scoreArray[3].name = "TEST"
+        scoreArray[4].name = "TEST"
+        scoreArray[5].name = "TEST"
+        scoreArray[6].name = "TEST"
+        scoreArray[7].name = "TEST"
+        scoreArray[8].name = "TEST"
+        scoreArray[9].name = "TEST"
+
         
         
         
@@ -85,6 +97,22 @@ class highScoreViewController: UIViewController {
         scores.append(score)
         scores = scores.sorted(by: >)
         scores.removeLast()
+        
+        var y = 0
+        while y < scores.count
+        {
+            if(score == scores[y])
+            {
+                // Make an alert here for the name????
+                
+            }
+            y += 1
+        }
+        //check if score is on list 
+        //prompt new name for the score
+        //connect the new name to the corresponding label
+        
+        
         var i = 0
         while i < scoreArray.count
         {
@@ -124,7 +152,24 @@ class highScoreViewController: UIViewController {
         }
     }
     
-        
+    @IBAction func onScoreTapped(_ sender: UITapGestureRecognizer)
+    {
+        for label in scoreArray
+        {
+            if label.frame.contains(sender.location(in: stackView))
+            {
+                if label.text == label.name
+                {
+                    label.text = "\(label.value)"
+                }
+                else
+                {
+                    label.text = label.name
+                }
+            }
+        }
+    }
+    
     func setNewValues(label : scoreLabel, value : Int)
     {
         label.value = value
