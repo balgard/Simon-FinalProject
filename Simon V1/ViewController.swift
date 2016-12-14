@@ -196,9 +196,6 @@ class ViewController: UIViewController
     }
     
     
-    // Want to prepare for the segue between viewControllers after pressing button, don't know how to get the current segue.
-    
-    
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)

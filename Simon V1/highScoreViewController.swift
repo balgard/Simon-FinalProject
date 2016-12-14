@@ -41,9 +41,6 @@ class highScoreViewController: UIViewController {
         scoreArray.append(score9)
         scoreArray.append(score10)
         
-        //not sure why this doesn't work
-        //let score1Area = NSTrackingArea(rect: score1.bounds, options: NSTrackingAreaOptions.ActiveAlways | NSTrackingAreaOptions.MouseEnteredAndExited, owner: self, userInfo: nil)
-        
         
         setNewValues(label: scoreArray[2], value: 0)
         setNewValues(label: scoreArray[3], value: 0)
@@ -103,7 +100,9 @@ class highScoreViewController: UIViewController {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 10, execute: {
                     label.backgroundColor = UIColor.clear
                 })
+                break
             }
+            
         }
     }
     
