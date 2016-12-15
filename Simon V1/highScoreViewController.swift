@@ -25,7 +25,6 @@ class highScoreViewController: UIViewController {
     var currentScore = 0
     
     var scoreArray = [scoreLabel]()
-    var nameArray = [String]()
     
     override func viewDidLoad()
     {
@@ -73,6 +72,7 @@ class highScoreViewController: UIViewController {
         checkNewScore(score: currentScore)
     }
 
+    //numbers the array
     func numberArray()
     {
         var i = 0
@@ -83,6 +83,7 @@ class highScoreViewController: UIViewController {
         }
     }
     
+    //checks to see if the new score is on the leaderboard or not, updates the name if it is, and shows the new score in yellow for 10 seconds
     func checkNewScore(score: Int)
     {
         var scores = [Int]()
@@ -127,6 +128,7 @@ class highScoreViewController: UIViewController {
         }
     }
     
+    //sorts out the values in scoreArray and removes the lowest score from the array
     func sortValues()
     {
         var i = 0
@@ -145,6 +147,7 @@ class highScoreViewController: UIViewController {
         }
     }
     
+    //gets triggered when a score is tapped and either shows the name of the scorer if their score is showing or their score if the name is showing
     @IBAction func onScoreTapped(_ sender: UITapGestureRecognizer)
     {
         for label in scoreArray
@@ -163,12 +166,14 @@ class highScoreViewController: UIViewController {
         }
     }
     
+    //changes the value of the label that is called and changes the text value to the new value
     func setNewValues(label : scoreLabel, value : Int)
     {
         label.value = value
         label.text = "\(label.value)"
     }
     
+    //Performs the segue back to the main viewController in order to play the game again.
     @IBAction func onTapped(_ sender: UIButton)
     {
         self.performSegue(withIdentifier: "unwindToMenu", sender: self)

@@ -39,6 +39,7 @@ class ViewController: UIViewController
         numberGrid()
     }
     
+    //creates a new pattern by creating an array of gridLabels and assigning them a random number between 0-3 that change the color of the gridLabel
     func createPattern()
     {
         gameStarted = true
@@ -51,6 +52,7 @@ class ViewController: UIViewController
         needsPattern = false
     }
     
+    //adds one more gridLabel at the end of the pattern
     func appendPattern()
     {
         var x = gridLabel()
@@ -60,6 +62,7 @@ class ViewController: UIViewController
         needsPattern = false
     }
     
+    // numbers the gridLabels and sets their old colors to their current background colors
     func numberGrid()
     {
         var i = 0
@@ -72,6 +75,7 @@ class ViewController: UIViewController
         }
     }
     
+    //shows off the new pattern created
     func showPattern()
     {
         for label in pattern
@@ -107,11 +111,13 @@ class ViewController: UIViewController
         }
     }
     
+    // creates an unwind segue used in the highScoreViewController
     @IBAction func unwindToMenu(Segue: UIStoryboardSegue)
     {
         
     }
     
+    //triggers when a grid is tapped, checks to see if the game has started, and then checks to see if the grid tapped is the correct one in the pattern, if it isn't then shows an alert that takes the player to the leaderboard screen
     @IBAction func onGridTapped(_ sender: UITapGestureRecognizer)
     {
         var message : String
@@ -183,6 +189,7 @@ class ViewController: UIViewController
         }
     }
     
+    //resets the game to the original set up
     func resetGame()
     {
         pattern = [gridLabel]()
@@ -197,7 +204,7 @@ class ViewController: UIViewController
     
     
     
-    
+    //moves the current score to the next view controller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         let dvc = segue.destination as! highScoreViewController
@@ -208,7 +215,7 @@ class ViewController: UIViewController
         }
     }
 
-    
+    //checks if a pattern should show up or not and then either creates a new pattern or appends the current pattern
     @IBAction func buttonPressed(_ sender: UIButton) {
         if ((needsPattern == true) && (tapsPerPattern == pattern.count))
         {
