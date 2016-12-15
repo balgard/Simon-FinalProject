@@ -12,6 +12,8 @@ class gridLabel: UILabel {
     var color = 0
     var oldColor = UIColor.white
     var number = 0
+    
+    //checks if the label is supposed to be tapped or not
     func shouldBeTapped(tapped: gridLabel, required: gridLabel) -> Bool
     {
         if tapped == required
@@ -24,6 +26,7 @@ class gridLabel: UILabel {
         }
     }
     
+    // changes the color of the gridLabel called for .2 seconds and then returns it to its original color 
     func setGridColor(grid: gridLabel)
     {
         if grid.color == 0//green
