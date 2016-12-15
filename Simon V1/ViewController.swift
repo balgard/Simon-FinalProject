@@ -11,7 +11,10 @@ import UIKit
 //Tried to have only one set of labels and create another array of labels that contains the created pattern.  Can't connect the two labels together so that when a label in the pattern array is called, the label of matching color on the storyboard will have its color changed.
 
 
-
+var previousScores = [Int]()
+var previousAttempts = Int()
+var previousNames = [String]()
+var shouldChangeColor = [Bool]()
 
 class ViewController: UIViewController
 {
@@ -29,6 +32,7 @@ class ViewController: UIViewController
     var gridArray = [gridLabel]()
     var pattern = [gridLabel]()
     var tapsPerPattern = 0
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -211,7 +215,11 @@ class ViewController: UIViewController
         if segue.identifier == "High Scores Screen"
         {
             dvc.title = "High Scores"
-            dvc.currentScore = pattern.count - 1
+            //dvc.currentScore = pattern.count - 1
+            previousScores.append(pattern.count - 1)
+            previousAttempts += 1
+            previousNames.append("Player \(previousAttempts)")
+            shouldChangeColor.append(true)
         }
     }
 

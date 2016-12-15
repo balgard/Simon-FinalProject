@@ -25,6 +25,7 @@ class highScoreViewController: UIViewController {
     var currentScore = 0
     
     var scoreArray = [scoreLabel]()
+    var playerScores = [Int]()
     
     override func viewDidLoad()
     {
@@ -61,7 +62,7 @@ class highScoreViewController: UIViewController {
         scoreArray[7].name = "TEST"
         scoreArray[8].name = "TEST"
         scoreArray[9].name = "TEST"
-
+        
         
         
         
@@ -71,7 +72,7 @@ class highScoreViewController: UIViewController {
         sortValues()
         checkNewScore(score: currentScore)
     }
-
+    
     //numbers the array
     func numberArray()
     {
@@ -86,6 +87,7 @@ class highScoreViewController: UIViewController {
     //checks to see if the new score is on the leaderboard or not, updates the name if it is, and shows the new score in yellow for 10 seconds
     func checkNewScore(score: Int)
     {
+        playerScores.append(score)
         var scores = [Int]()
         var x = 0
         while x < scoreArray.count
@@ -94,41 +96,59 @@ class highScoreViewController: UIViewController {
             x += 1
         }
         scores.append(score)
-        scores = scores.sorted(by: >)
-        scores.removeLast()
-        
-        var y = 0
-        while y < scores.count
+        var q = 0
+        while q < previousScores.count
         {
-            if(score == scores[y])
-            {
-                scoreArray[y].name = "Player"
-            }
-            y += 1
+            scores.append(previousScores[q])
+            q += 1
         }
-        
+        scores = scores.sorted(by: >)
+        while scores.count > scoreArray.count
+        {
+            scores.removeLast()
+        }
         var i = 0
         while i < scoreArray.count
         {
             setNewValues(label: scoreArray[i], value: scores[i])
             i += 1
         }
-        for label in scoreArray
+        var player = 0
+        while player < previousScores.count
         {
-            if label.value == score
+            if previousScores[player] == scoreArray[player].value
             {
-                label.backgroundColor = UIColor.yellow
-                
-                DispatchQueue.main.asyncAfter(deadline: .now() + 10, execute: {
-                    label.backgroundColor = UIColor.clear
-                })
-                break
+                scoreArray[player].value = previousScores[player]
+                scoreArray[player].name = previousNames[player]
             }
-            
+            player += 1
+        }
+        var new = 0
+        var number = previousScores.count - 1
+        while new < previousScores.count
+        {
+            for label in scoreArray
+            {
+                if label.value == previousScores[new]
+                {
+                    label.name = "Player \(previousAttempts - number)"
+                    if shouldChangeColor[new] == true
+                    {
+                    label.backgroundColor = UIColor.yellow
+                
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 10, execute: {
+                        label.backgroundColor = UIColor.clear
+                    })
+                        shouldChangeColor[new] = false
+                    }
+                    number -= 1
+                }
+            }
+            new += 1
         }
     }
     
-    //sorts out the values in scoreArray and removes the lowest score from the array
+    //sorts out the values in scoreArray
     func sortValues()
     {
         var i = 0
