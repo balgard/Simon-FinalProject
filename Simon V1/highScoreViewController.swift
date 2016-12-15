@@ -21,13 +21,11 @@ class highScoreViewController: UIViewController {
     @IBOutlet weak var score9: scoreLabel!
     @IBOutlet weak var score10: scoreLabel!
     @IBOutlet weak var scoreView: UIView!
-    @IBOutlet weak var stackView: UIStackView!
     
     var currentScore = 0
     
     var scoreArray = [scoreLabel]()
     var nameArray = [String]()
-    var namesScores = [Int : String]()
     
     override func viewDidLoad()
     {
@@ -47,14 +45,14 @@ class highScoreViewController: UIViewController {
         setNewValues(label: scoreArray[2], value: 0)
         setNewValues(label: scoreArray[3], value: 0)
         setNewValues(label: scoreArray[1], value: 0)
-        setNewValues(label: scoreArray[0], value: 0)
+        setNewValues(label: scoreArray[0], value: 5)
         setNewValues(label: scoreArray[4], value: 0)
         setNewValues(label: scoreArray[5], value: 0)
         setNewValues(label: scoreArray[6], value: 0)
         setNewValues(label: scoreArray[7], value: 3)
         setNewValues(label: scoreArray[8], value: 0)
         setNewValues(label: scoreArray[9], value: 0)
-        scoreArray[0].name = "TEST"
+        scoreArray[0].name = "Miko"
         scoreArray[1].name = "TEST"
         scoreArray[2].name = "TEST"
         scoreArray[3].name = "TEST"
@@ -74,7 +72,7 @@ class highScoreViewController: UIViewController {
         sortValues()
         checkNewScore(score: currentScore)
     }
-    
+
     func numberArray()
     {
         var i = 0
@@ -103,15 +101,10 @@ class highScoreViewController: UIViewController {
         {
             if(score == scores[y])
             {
-                // Make an alert here for the name????
-                
+                scoreArray[y].name = "Player"
             }
             y += 1
         }
-        //check if score is on list 
-        //prompt new name for the score
-        //connect the new name to the corresponding label
-        
         
         var i = 0
         while i < scoreArray.count
@@ -156,7 +149,7 @@ class highScoreViewController: UIViewController {
     {
         for label in scoreArray
         {
-            if label.frame.contains(sender.location(in: stackView))
+            if label.frame.contains(sender.location(in: scoreView))
             {
                 if label.text == label.name
                 {

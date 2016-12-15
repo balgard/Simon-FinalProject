@@ -136,72 +136,76 @@
                                 <rect key="frame" x="87" y="159" width="240" height="418"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xml-Ce-10U">
-                                        <rect key="frame" x="98" y="31" width="45" height="356"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="100" translatesAutoresizingMaskIntoConstraints="NO" id="Sur-c5-129" customClass="scoreLabel" customModule="Simon_V1" customModuleProvider="target">
+                                        <rect key="frame" x="90" y="217" width="60" height="20.333333333333332"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAt-0X-Sau" customClass="scoreLabel" customModule="Simon_V1" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="44.666666666666664" height="20.333333333333332"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ah7-Ij-LG2" customClass="scoreLabel" customModule="Simon_V1" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="37.333333333333336" width="44.666666666666664" height="20.333333333333329"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ahc-XY-6jj" customClass="scoreLabel" customModule="Simon_V1" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="74.666666666666686" width="44.666666666666664" height="20.333333333333329"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AZz-uu-jpi" customClass="scoreLabel" customModule="Simon_V1" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="112" width="44.666666666666664" height="20.333333333333343"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4VM-en-Pey" customClass="scoreLabel" customModule="Simon_V1" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="149.33333333333334" width="44.666666666666664" height="20.333333333333314"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pvf-QZ-Sqk" customClass="scoreLabel" customModule="Simon_V1" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="186.66666666666663" width="44.666666666666664" height="20.333333333333343"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8u0-df-Uen" customClass="scoreLabel" customModule="Simon_V1" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="224" width="44.666666666666664" height="20.333333333333343"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOv-RR-8B4" customClass="scoreLabel" customModule="Simon_V1" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="261.33333333333331" width="44.666666666666664" height="20.333333333333371"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0y8-Ug-nZN" userLabel="Score9" customClass="scoreLabel" customModule="Simon_V1" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="298.66666666666674" width="44.666666666666664" height="20.333333333333314"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYM-fR-eQS" customClass="scoreLabel" customModule="Simon_V1" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="336" width="44.666666666666664" height="20.333333333333314"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="100" translatesAutoresizingMaskIntoConstraints="NO" id="XQk-1h-Woi" customClass="scoreLabel" customModule="Simon_V1" customModuleProvider="target">
+                                        <rect key="frame" x="90" y="367" width="60" height="20.333333333333332"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="100" translatesAutoresizingMaskIntoConstraints="NO" id="y5K-nq-4BR" customClass="scoreLabel" customModule="Simon_V1" customModuleProvider="target">
+                                        <rect key="frame" x="90" y="105" width="60" height="20.333333333333332"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="100" translatesAutoresizingMaskIntoConstraints="NO" id="l0L-ed-n4f" customClass="scoreLabel" customModule="Simon_V1" customModuleProvider="target">
+                                        <rect key="frame" x="90" y="143" width="60" height="20.333333333333332"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="100" translatesAutoresizingMaskIntoConstraints="NO" id="r07-Gw-gvF" customClass="scoreLabel" customModule="Simon_V1" customModuleProvider="target">
+                                        <rect key="frame" x="90" y="180" width="60" height="20.333333333333332"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="100" translatesAutoresizingMaskIntoConstraints="NO" id="hHp-rA-kP6" customClass="scoreLabel" customModule="Simon_V1" customModuleProvider="target">
+                                        <rect key="frame" x="90" y="31" width="60" height="20.333333333333332"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="100" translatesAutoresizingMaskIntoConstraints="NO" id="wkl-JP-Ydp" customClass="scoreLabel" customModule="Simon_V1" customModuleProvider="target">
+                                        <rect key="frame" x="90" y="68" width="60" height="20.333333333333332"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="100" translatesAutoresizingMaskIntoConstraints="NO" id="YCD-5v-h35" customClass="scoreLabel" customModule="Simon_V1" customModuleProvider="target">
+                                        <rect key="frame" x="90" y="292" width="60" height="20.333333333333332"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="100" translatesAutoresizingMaskIntoConstraints="NO" id="nmP-jc-eSs" customClass="scoreLabel" customModule="Simon_V1" customModuleProvider="target">
+                                        <rect key="frame" x="90" y="255" width="60" height="20.333333333333332"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="100" translatesAutoresizingMaskIntoConstraints="NO" id="mAN-RG-pEg" userLabel="Score9" customClass="scoreLabel" customModule="Simon_V1" customModuleProvider="target">
+                                        <rect key="frame" x="90" y="329" width="60" height="20.333333333333332"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
@@ -214,18 +218,17 @@
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="score1" destination="gAt-0X-Sau" id="DR2-k8-CDw"/>
-                        <outlet property="score10" destination="SYM-fR-eQS" id="WRm-i1-YLJ"/>
-                        <outlet property="score2" destination="ah7-Ij-LG2" id="V6v-fq-bEV"/>
-                        <outlet property="score3" destination="Ahc-XY-6jj" id="A5X-9d-U4e"/>
-                        <outlet property="score4" destination="AZz-uu-jpi" id="YWL-A5-P6U"/>
-                        <outlet property="score5" destination="4VM-en-Pey" id="eOR-Wm-leG"/>
-                        <outlet property="score6" destination="Pvf-QZ-Sqk" id="vPz-yp-b3H"/>
-                        <outlet property="score7" destination="8u0-df-Uen" id="vJ2-9A-mw7"/>
-                        <outlet property="score8" destination="FOv-RR-8B4" id="Ly9-ZC-MWO"/>
-                        <outlet property="score9" destination="0y8-Ug-nZN" id="PHa-ug-Kiz"/>
+                        <outlet property="score1" destination="hHp-rA-kP6" id="0fS-qc-72w"/>
+                        <outlet property="score10" destination="XQk-1h-Woi" id="Y81-Q1-Dhx"/>
+                        <outlet property="score2" destination="wkl-JP-Ydp" id="j4m-Yr-Z9W"/>
+                        <outlet property="score3" destination="y5K-nq-4BR" id="cDD-vB-q1e"/>
+                        <outlet property="score4" destination="l0L-ed-n4f" id="pct-NL-ZRC"/>
+                        <outlet property="score5" destination="r07-Gw-gvF" id="mVc-NJ-mNv"/>
+                        <outlet property="score6" destination="Sur-c5-129" id="6lb-8z-T37"/>
+                        <outlet property="score7" destination="nmP-jc-eSs" id="DIu-UI-dzy"/>
+                        <outlet property="score8" destination="YCD-5v-h35" id="fhq-yi-XI9"/>
+                        <outlet property="score9" destination="mAN-RG-pEg" id="myS-LG-62w"/>
                         <outlet property="scoreView" destination="aaA-Io-hjD" id="XhB-AD-4Ek"/>
-                        <outlet property="stackView" destination="Xml-Ce-10U" id="xDs-yb-Z1w"/>
                         <segue destination="g4C-sp-5JR" kind="unwind" identifier="unwindToMenu" unwindAction="unwindToMenuWithSegue:" id="WIE-N4-iWj"/>
                     </connections>
                 </viewController>
