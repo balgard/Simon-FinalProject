@@ -25,6 +25,7 @@ class highScoreViewController: UIViewController {
     var currentScore = 0
     
     var scoreArray = [scoreLabel]()
+    var leaderboardNames = [String]()
     var playerScores = [Int]()
     
     override func viewDidLoad()
@@ -44,7 +45,7 @@ class highScoreViewController: UIViewController {
         
         setNewValues(label: scoreArray[2], value: 0)
         setNewValues(label: scoreArray[3], value: 0)
-        setNewValues(label: scoreArray[1], value: 0)
+        setNewValues(label: scoreArray[1], value: 8)
         setNewValues(label: scoreArray[0], value: 5)
         setNewValues(label: scoreArray[4], value: 0)
         setNewValues(label: scoreArray[5], value: 0)
@@ -52,8 +53,8 @@ class highScoreViewController: UIViewController {
         setNewValues(label: scoreArray[7], value: 3)
         setNewValues(label: scoreArray[8], value: 0)
         setNewValues(label: scoreArray[9], value: 0)
-        scoreArray[0].name = "Miko"
-        scoreArray[1].name = "TEST"
+        scoreArray[0].name = "Reed"
+        scoreArray[1].name = "Miko"
         scoreArray[2].name = "TEST"
         scoreArray[3].name = "TEST"
         scoreArray[4].name = "TEST"
@@ -66,7 +67,11 @@ class highScoreViewController: UIViewController {
         
         
         
+        
+        
+        
         numberArray()
+        setNames()
         
         
         sortValues()
@@ -81,6 +86,17 @@ class highScoreViewController: UIViewController {
         {
             label.number = i
             i += 1
+        }
+    }
+    
+    //adds all current names to an array of names
+    func setNames()
+    {
+        var x = 0
+        while x < scoreArray.count
+        {
+            leaderboardNames.append(scoreArray[x].name)
+            x += 1
         }
     }
     
@@ -131,20 +147,24 @@ class highScoreViewController: UIViewController {
             {
                 if label.value == previousScores[new]
                 {
+                    //only changes the name for the first score if there are multiple scores with the same value
                     label.name = "Player \(previousAttempts - number)"
+                    
                     if shouldChangeColor[new] == true
                     {
-                    label.backgroundColor = UIColor.yellow
-                
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 10, execute: {
-                        label.backgroundColor = UIColor.clear
-                    })
+                        label.backgroundColor = UIColor.yellow
+                        
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 10, execute: {
+                            label.backgroundColor = UIColor.clear
+                        })
                         shouldChangeColor[new] = false
+                        
                     }
                     number -= 1
                 }
             }
             new += 1
+            
         }
     }
     
