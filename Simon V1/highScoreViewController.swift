@@ -27,6 +27,7 @@ class highScoreViewController: UIViewController {
     var scoreArray = [scoreLabel]()
     var leaderboardNames = [String]()
     var playerScores = [Int]()
+    var localNameChanges = [Bool]()
     
     override func viewDidLoad()
     {
@@ -69,7 +70,7 @@ class highScoreViewController: UIViewController {
         
         
         
-        
+        localNameChanges = shouldChangeName
         numberArray()
         setNames()
         
@@ -148,7 +149,11 @@ class highScoreViewController: UIViewController {
                 if label.value == previousScores[new]
                 {
                     //only changes the name for the first score if there are multiple scores with the same value
-                    label.name = "Player \(previousAttempts - number)"
+                    if shouldChangeName[new] == true
+                    {
+                        label.name = "Player \(previousAttempts - number)"
+                        number -= 1
+                    }
                     
                     if shouldChangeColor[new] == true
                     {
@@ -158,14 +163,14 @@ class highScoreViewController: UIViewController {
                             label.backgroundColor = UIColor.clear
                         })
                         shouldChangeColor[new] = false
-                        
                     }
-                    number -= 1
+                    
                 }
+                
             }
             new += 1
-            
         }
+        shouldChangeName = localNameChanges
     }
     
     //sorts out the values in scoreArray
