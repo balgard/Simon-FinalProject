@@ -8,7 +8,6 @@
 
 import UIKit
 
-//Tried to have only one set of labels and create another array of labels that contains the created pattern.  Can't connect the two labels together so that when a label in the pattern array is called, the label of matching color on the storyboard will have its color changed.
 
 
 var previousScores = [Int]()
@@ -150,7 +149,7 @@ class ViewController: UIViewController
                             self.resetGame()
                         }
                         alert.addAction(alertAction)
-                        present(alert, animated: true, completion: nil)
+                        present(alert, animated: false, completion: nil)
                         gameEnded = true
                     }
                     if gameEnded == false
@@ -184,7 +183,7 @@ class ViewController: UIViewController
                                 self.resetGame()
                             }
                             alert.addAction(alertAction)
-                            present(alert, animated: true, completion: nil)
+                            present(alert, animated: false, completion: nil)
                             
                         }
                     }
