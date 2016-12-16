@@ -14,6 +14,7 @@ var previousScores = [Int]()
 var previousAttempts = Int()
 var previousNames = [String]()
 var shouldChangeColor = [Bool]()
+var shouldChangeName = [Bool]()
 
 class ViewController: UIViewController
 {
@@ -219,6 +220,7 @@ class ViewController: UIViewController
             previousAttempts += 1
             previousNames.append("Player \(previousAttempts)")
             shouldChangeColor.append(true)
+            shouldChangeName.append(true)
         }
     }
 
