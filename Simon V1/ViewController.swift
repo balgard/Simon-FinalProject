@@ -143,8 +143,8 @@ class ViewController: UIViewController
                             message = "You didn't memorize any pattern"
                         }
                         
-                        let alert = UIAlertController(title: "You have lost ", message: message, preferredStyle: .alert)
-                        let alertAction = UIAlertAction(title: "Restart Game", style: .default) {
+                        let alert = UIAlertController(title: "You have lost", message: message, preferredStyle: .alert)
+                        let alertAction = UIAlertAction(title: "Show High Scores", style: .default) {
                             
                             (action) -> Void in self.performSegue(withIdentifier: "High Scores Screen", sender: self)
                             self.resetGame()
@@ -177,8 +177,8 @@ class ViewController: UIViewController
                                 message = "You didn't memorize any pattern"
                             }
                             
-                            let alert = UIAlertController(title: "You have lost ", message: message, preferredStyle: .alert)
-                            let alertAction = UIAlertAction(title: "Restart Game", style: .default) {
+                            let alert = UIAlertController(title: "You have lost", message: message, preferredStyle: .alert)
+                            let alertAction = UIAlertAction(title: "Show High Scores", style: .default) {
                                 
                                 (action) ->Void in self.performSegue(withIdentifier: "High Scores Screen", sender: self)
                                 self.resetGame()
