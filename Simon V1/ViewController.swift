@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import AVFoundation
 
 
+
+var player : AVAudioPlayer?
 
 var previousScores = [Int]()
 var previousAttempts = Int()
@@ -130,6 +133,66 @@ class ViewController: UIViewController
             if label.frame.contains(sender.location(in: backgroundView))
             {
                 label.setGridColor(grid: label)
+                if label == greenLabel
+                {
+                    do
+                    {
+                        try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+                        try AVAudioSession.sharedInstance().setActive(true)
+                        guard let url = Bundle.main.url(forResource: "simonSound1", withExtension: "mp3") else { return }
+                        player = try AVAudioPlayer(contentsOf: url)
+                        player?.play()
+                    }
+                    catch let error
+                    {
+                        print(error.localizedDescription)
+                    }
+                }
+                else if label == redLabel
+                {
+                    do
+                    {
+                        try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+                        try AVAudioSession.sharedInstance().setActive(true)
+                        guard let url = Bundle.main.url(forResource: "simonSound2", withExtension: "mp3") else { return }
+                        player = try AVAudioPlayer(contentsOf: url)
+                        player?.play()
+                    }
+                    catch let error
+                    {
+                        print("")
+                    }
+                }
+                else if label == yellowLabel
+                {
+                    do
+                    {
+                        try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+                        try AVAudioSession.sharedInstance().setActive(true)
+                        guard let url = Bundle.main.url(forResource: "simonSound3", withExtension: "mp3") else { return }
+                        player = try AVAudioPlayer(contentsOf: url)
+                        player?.play()
+                    }
+                    catch let error
+                    {
+                        print("")
+                    }
+                }
+                else if label == blueLabel
+                {
+                    do
+                    {
+                        try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+                        try AVAudioSession.sharedInstance().setActive(true)
+                        guard let url = Bundle.main.url(forResource: "simonSound4", withExtension: "mp3") else { return }
+                        player = try AVAudioPlayer(contentsOf: url)
+                        player?.play()
+                    }
+                    catch let error
+                    {
+                        print("")
+                    }
+                }
                 if(gameStarted == true)
                 {
                     if(tapsPerPattern == pattern.count)
@@ -223,7 +286,7 @@ class ViewController: UIViewController
             shouldChangeName.append(true)
         }
     }
-
+    
     //checks if a pattern should show up or not and then either creates a new pattern or appends the current pattern
     @IBAction func buttonPressed(_ sender: UIButton) {
         if ((needsPattern == true) && (tapsPerPattern == pattern.count))

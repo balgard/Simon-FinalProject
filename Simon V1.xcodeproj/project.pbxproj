@@ -18,6 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F0F713A1F4DEEDF003BC2BD /* simonSound1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = simonSound1.mp3; sourceTree = "<group>"; };
+		3F0F713B1F4DEEFD003BC2BD /* simonSound2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = simonSound2.mp3; sourceTree = "<group>"; };
+		3F0F713C1F4DEF06003BC2BD /* simonSound3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = simonSound3.mp3; sourceTree = "<group>"; };
+		3F0F713D1F4DEF0C003BC2BD /* simonSound4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = simonSound4.mp3; sourceTree = "<group>"; };
 		3F6E9D3A1DF70456007007B0 /* highScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = highScoreViewController.swift; sourceTree = "<group>"; };
 		3FB88BC41DF99C36009C50A3 /* scoreLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = scoreLabel.swift; sourceTree = "<group>"; };
 		3FE63FEB1DF0659B00853352 /* Simon V1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simon V1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +70,10 @@
 				3FE640001DF0689900853352 /* gridLabel.swift */,
 				3FB88BC41DF99C36009C50A3 /* scoreLabel.swift */,
 				3FE63FF21DF0659B00853352 /* Main.storyboard */,
+				3F0F713C1F4DEF06003BC2BD /* simonSound3.mp3 */,
+				3F0F713A1F4DEEDF003BC2BD /* simonSound1.mp3 */,
+				3F0F713B1F4DEEFD003BC2BD /* simonSound2.mp3 */,
+				3F0F713D1F4DEF0C003BC2BD /* simonSound4.mp3 */,
 				3FE63FF51DF0659B00853352 /* Assets.xcassets */,
 				3FE63FF71DF0659B00853352 /* LaunchScreen.storyboard */,
 				3FE63FFA1DF0659B00853352 /* Info.plist */,
@@ -100,12 +108,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = Balgard;
 				TargetAttributes = {
 					3FE63FEA1DF0659A00853352 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 92U9E939H3;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -185,7 +194,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -193,7 +204,12 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -235,7 +251,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -243,7 +261,12 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -278,7 +301,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "balgard.example.Simon-V1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -291,7 +315,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "balgard.example.Simon-V1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
